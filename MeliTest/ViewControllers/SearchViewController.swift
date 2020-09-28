@@ -52,15 +52,18 @@ class SearchViewController: UIViewController, Storyboarded {
     func setProductManager(productManager:ProductManager) {
         self.productManager = productManager
     }
+    
+    func reloadTable() {
+        DispatchQueue.main.async {
+            self.resulstTableView.reloadData()
+        }
+    }
 }
 
 extension SearchViewController: ProductManagerDelegate {
     func productsLoaded(products:Products) {
         self.results = products.items!
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.resulstTableView.reloadData()
-        }
+        reloadTable()
     }
     
     func productsLoadFailed() {
@@ -79,9 +82,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         results = [Product]()
-        DispatchQueue.main.async { [weak self] in
-            self?.resulstTableView.reloadData()
-        }
+        reloadTable()
     }
 }
 
