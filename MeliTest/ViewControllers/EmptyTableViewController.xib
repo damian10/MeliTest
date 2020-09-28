@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyTableViewController" customModule="MeliTest" customModuleProvider="target">
+            <connections>
+                <outlet property="infoView" destination="3wm-pG-oec" id="Vjv-Kj-CzR"/>
+                <outlet property="messageLabel" destination="bed-4B-OZ5" id="Xr3-P2-lpa"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LZr-6z-T9i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3wm-pG-oec">
+                    <rect key="frame" x="50" y="378" width="314" height="150.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-05-O9n">
+                            <rect key="frame" x="107" y="0.0" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="HAu-nc-6PJ"/>
+                                <constraint firstAttribute="height" constant="100" id="gug-6D-ZPL"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bed-4B-OZ5">
+                            <rect key="frame" x="0.0" y="130" width="314" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bed-4B-OZ5" secondAttribute="trailing" id="kan-aQ-asU"/>
+                        <constraint firstItem="bed-4B-OZ5" firstAttribute="leading" secondItem="3wm-pG-oec" secondAttribute="leading" id="rmi-2U-RzR"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3wm-pG-oec" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GrB-fl-Ce9"/>
+                <constraint firstItem="3wm-pG-oec" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="SNK-Nw-ZfK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3wm-pG-oec" secondAttribute="trailing" constant="50" id="qc8-bF-QXU"/>
+                <constraint firstItem="3wm-pG-oec" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="wCI-Di-Bpy"/>
+            </constraints>
+            <point key="canvasLocation" x="-42.028985507246382" y="102.45535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
